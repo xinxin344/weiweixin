@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <!-- <div class="box">
     <div class="box-item" @click="itemClick('home')">
       <img class="box-item__icon" src="@/assets/首页.svg" alt=""/>
       <div class="box-item__text">首页</div>
@@ -16,12 +16,21 @@
       <img class="box-item__icon" src="@/assets/首页.svg" alt=""/>
       <div class="box-item__text">我的</div>
     </div>
-  </div>
+  </div> -->
+  <van-tabbar v-model="active" route>
+    <van-tabbar-item name="home" to="/home" icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item name="search" to="/MailLIst" icon="search">通讯</van-tabbar-item>
+    <van-tabbar-item name="friends" icon="friends-o">发现</van-tabbar-item>
+    <van-tabbar-item name="setting" icon="setting-o">我的</van-tabbar-item>
+  </van-tabbar>
+
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import { useRouter } from 'vue-router'
+
+const active = ref('home');
 
 const router = useRouter()
 

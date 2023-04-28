@@ -5,6 +5,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 const Home = () => import('@/pages/home/index.vue')
 const Index = () => import('@/pages/index/index.vue')
 const My = () => import('@/pages/my/index.vue')
+const Chat = () => import('@/pages/chat/index.vue')
 const MailLIst = () => import('@/pages/mailList/index.vue')
 
 export const routes: RouteRecordRaw[] = [
@@ -28,6 +29,11 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/my',
     component: My,
+  },
+  {
+    path: '/chat',
+    name: 'chat',
+    component: Chat,
   }
 ]
 
