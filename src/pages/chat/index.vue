@@ -49,7 +49,7 @@ const messages = reactive(
   ]
 )
 
-const ws = new WebSocket('ws:localhost:8000')
+const ws = new WebSocket('ws://localhost:8000')
 
 onMounted(() => {
   ws.addEventListener('open',handleOpen,false);

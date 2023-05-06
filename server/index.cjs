@@ -1,6 +1,6 @@
 const ws = require('ws')
 
-const server = new ws.Server( { port: 8800})
+const server = new ws.Server( { port: 8000})
 console.log(111);
 
 const init = () => {
